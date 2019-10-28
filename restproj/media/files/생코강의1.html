@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+        #first { 
+            font-weight : bold;
+            color: red;
+        }
+
+        span {
+            color: blue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<script> 
+    function first_mouseover() {
+        first.style.color = "purple";
+    }
+
+    function first_mouseout() {
+        first.style.color = "red";
+    }
+
+</script>
+    <h1> <a href = "https://www.w3schools.com/whatis/whatis_js.asp"> Javascript </a> </h1>
+
+    <ol>
+        <li> <a href = "#"> HTML </a> </li>
+        <li> <a href = "#"> CSS </a> </li>
+        <li> <a href = "#"> JAVASCRIPT </a> </li>
+        <li> <a href = "#"> C++ </a> </li>
+    </ol>
+
+<input type = "button" value = "night" onclick = "
+var target = document.querySelector('body');
+
+if (this.value === 'night') {
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+    
+    var links = document.querySelectorAll('a');
+    var i = 0;
+    while(i < links.length) {
+        links[i].style.color = 'lemonchiffon';
+        i += 1;
+        }
+    }  
+    else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+        var links = document.querySelectorAll('a');
+        var i = 0;
+        while(i < links.length) {
+            links[i].style.color = 'blue';
+            i += 1;
+        }
+    }
+">
+
+
+<p>
+    <span id = "first" onMouseover = "first_mouseover();" onMouseout = "first_mouseout();"> JavaScript </span> is the programming language of HTML and the Web.
+
+    <span> JavaScript </span> is easy to learn.
+
+    This tutorial will teach you <span> JavaScript </span> from basic to advanced. 
+</p>
+
+
+
+</body>
+</html>
